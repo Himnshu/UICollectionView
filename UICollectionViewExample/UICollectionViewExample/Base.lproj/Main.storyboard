@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UICollectionViewExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yX7-7B-iu5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Nhn-PH-4ra">
+                                    <size key="itemSize" width="95" height="94"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="Cell" id="8bc-Yb-MDs" customClass="Cell" customModule="UICollectionViewExample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="95" height="94"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="95" height="94"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Nl-xj-n5v">
+                                                    <rect key="frame" x="0.0" y="0.0" width="95" height="94"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="4Nl-xj-n5v" secondAttribute="trailing" id="5bV-Qu-APl"/>
+                                            <constraint firstAttribute="bottom" secondItem="4Nl-xj-n5v" secondAttribute="bottom" id="WuY-WH-qev"/>
+                                            <constraint firstItem="4Nl-xj-n5v" firstAttribute="top" secondItem="8bc-Yb-MDs" secondAttribute="top" id="biS-hR-9Sm"/>
+                                            <constraint firstItem="4Nl-xj-n5v" firstAttribute="leading" secondItem="8bc-Yb-MDs" secondAttribute="leading" id="fUy-Ox-K8Y"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="hst-lE-STq"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="nc8-lI-QNJ"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yX7-7B-iu5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FTb-a9-EPw"/>
+                            <constraint firstAttribute="trailing" secondItem="yX7-7B-iu5" secondAttribute="trailing" id="JD5-Ur-xPm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yX7-7B-iu5" secondAttribute="bottom" id="dTZ-aS-gsg"/>
+                            <constraint firstItem="yX7-7B-iu5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hbs-JT-m1k"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mCollectionView" destination="yX7-7B-iu5" id="sEa-8K-wR7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="323" y="286"/>
+        </scene>
+    </scenes>
+</document>
